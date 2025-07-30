@@ -1,13 +1,13 @@
 <svelte:options customElement="copy-to-clipboard" />
 
-<script>
-    let {value, delay = 3000} = $props()
+<script>    
+    let {value, delay = 3000} = $props()    
     let classname = $state('ready');
     function onclick() {
         navigator.clipboard.writeText(value);
-        classname = 'copied';
+        classname = 'copied';        
         setTimeout(() => classname = 'ready', delay);
-    }
+    }    
 </script>
 
 <div>
@@ -19,34 +19,31 @@
 <style>
     div {
         position: absolute;
-        right: 0.5rem;
-        top: 0.5rem;
+        right: var(--copy-to-clipboard-background-position-right, 0.5rem);
+        top: var(--copy-to-clipboard-background-position-top, 0.5rem);
     }
     button {        
         position: relative;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: var(--copy-to-clipboard-button-size, 1.5rem);
+        width: var(--copy-to-clipboard-button-size, 1.5rem);
         padding: 15%;
         display: flex;
-        background: #f9f9f9;
+        background: var(--copy-to-clipboard-background-color, #f9f9f9);
         border: none;
         cursor: pointer;
-        border-radius: 3px;
+        border-radius: var(--copy-to-clipboard-border-radius, 3px);
     }
-    
+    /**
     button:before {
         content: "Copy to clipboard";        
         position:absolute;
-        
-        /* vertically center */
+                
         top:50%;
         transform:translateY(-50%);
-        
-        /* move to right */
+                
         left:100%;
-        margin-left:15px; /* and add a small left margin */
-        
-        /* basic styles */
+        margin-left:15px;
+                
         width:100px;
         padding:10px;
         border-radius:10px;
@@ -56,11 +53,12 @@
         display: none;
         opacity:0;
         transition:0.5s opacity;
-    }
+    }        
     button:hover:before {
         display: block;
         opacity: 1;
     }
+    **/
     button > span {        
         aspect-ratio: 1 / 1;		
         background-repeat: no-repeat;

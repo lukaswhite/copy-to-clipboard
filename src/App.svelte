@@ -4,7 +4,7 @@
 
 <main>
   <div class="container">
-    <copy-to-clipboard value="this is code"></copy-to-clipboard>
+    <copy-to-clipboard value="this is code" delay="2000"></copy-to-clipboard>
   </div>
   
 </main>
