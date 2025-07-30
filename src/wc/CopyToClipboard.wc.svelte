@@ -18,7 +18,7 @@
 
 <style>
     div {
-        position: absolute;
+        position: var(--copy-to-clipboard-background-position, absolute);
         right: var(--copy-to-clipboard-background-position-right, 0.5rem);
         top: var(--copy-to-clipboard-background-position-top, 0.5rem);
     }

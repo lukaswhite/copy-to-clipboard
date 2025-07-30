@@ -31,3 +31,19 @@ During development, run Vite with:
 ```bash
 npm run dev
 ```
+
+## Styling
+
+The button's pretty opinionated in terms of how its styled; wholesale changed probably require you downloading the source, modifying the component and building.
+
+There are, however, some CSS variables you can use to customise certain properties, detailed below with their default:
+
+```css
+:root {
+  --copy-to-clipboard-background-position: absolute;
+  --copy-to-clipboard-background-position-right: 0.5rem;
+  --copy-to-clipboard-background-position-top: 0.5rem;  
+  --copy-to-clipboard-button-size: 1.5rem;        
+  --copy-to-clipboard-background-color: #f9f9f9;  
+  --copy-to-clipboard-border-radius: 3px;
+}
